@@ -1,0 +1,367 @@
+{
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:5056"
+    },
+    "Routes": [
+        //CARTS
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/CartGet/{id}",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DownstreamPathTemplate": "/api/Cart/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5081
+                }
+            ]
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/Postcart",
+            "UpstreamHttpMethod": [ "POST" ],
+            "DownstreamPathTemplate": "/api/Cart",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5081
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/PutcartItemById",
+            "UpstreamHttpMethod": [ "PUT" ],
+            "DownstreamPathTemplate": "/api/Cart/{cartItemId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5081
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/DeleteById",
+            "UpstreamHttpMethod": [ "DELETE" ],
+            "DownstreamPathTemplate": "/api/Cart/{cartItemId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5081
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/DeleteByUserId",
+            "UpstreamHttpMethod": [ "DELETE" ],
+            "DownstreamPathTemplate": "/api/Cart/{userId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5081
+                }
+            ]
+
+        },
+
+        //ORDER
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/GetOrders",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DownstreamPathTemplate": "/api/Orders/GetOrders",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5074
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/GetOrderById/{id}",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DownstreamPathTemplate": "/api/Orders/GetOrderById/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5074
+                }
+            ]
+
+        },
+
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/CreateOrder",
+            "UpstreamHttpMethod": [ "POST" ],
+            "DownstreamPathTemplate": "/api/Orders/CreateOrder",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5074
+                }
+            ]
+        },
+
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/UpdateOrder/{id}",
+            "UpstreamHttpMethod": [ "PUT" ],
+            "DownstreamPathTemplate": "/api/Orders/UpdateOrder/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5074
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/DeleteOrder/{id}",
+            "UpstreamHttpMethod": [ "DELETE" ],
+            "DownstreamPathTemplate": "/api/Orders/DeleteOrder/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5074
+                }
+            ]
+
+        },
+
+        //PRODUCTS
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/GetProducts",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DownstreamPathTemplate": "/api/Product",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5041
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/PostProduct",
+            "UpstreamHttpMethod": [ "POST" ],
+            "DownstreamPathTemplate": "/api/Product",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5041
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/GetProductbyId/{id}",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DownstreamPathTemplate": "/api/Product/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5041
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/PutProduct",
+            "UpstreamHttpMethod": [ "PUT" ],
+            "DownstreamPathTemplate": "/api/Product/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5041
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/DeleteProduct",
+            "UpstreamHttpMethod": [ "DELETE" ],
+            "DownstreamPathTemplate": "/api/Product/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5041
+                }
+            ]
+
+        },
+
+        //WALLETS
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/GetWallet",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DownstreamPathTemplate": "/api/Wallet",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5177
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/GetWalletStatusByorderId/{orderId}",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DownstreamPathTemplate": "/api/Wallet/status/{orderId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5177
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/PostWallet",
+            "UpstreamHttpMethod": [ "POST" ],
+            "DownstreamPathTemplate": "/api/Wallet/process",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5177
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/PutWallet",
+            "UpstreamHttpMethod": [ "PUT" ],
+            "DownstreamPathTemplate": "/api/Wallet/update-status/{orderId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5177
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/GetStatement/{userId}",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DownstreamPathTemplate": "/api/Wallet/statements/{userId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5177
+                }
+            ]
+
+        },
+
+        //PROFILE
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/GetAllProfiles",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DownstreamPathTemplate": "/api/User/GetAllProfiles",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5037
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/GetProfilesById/{id}",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DownstreamPathTemplate": "/api/User/GetProfile/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5037
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/UpdateProfile",
+            "UpstreamHttpMethod": [ "PUT" ],
+            "DownstreamPathTemplate": "/api/User/UpdateProfile/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5037
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/GetProfileByUserName",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DownstreamPathTemplate": "/api/User/getProfileByUserName/{userName}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5037
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/DeleteProfileById",
+            "UpstreamHttpMethod": [ "DELETE" ],
+            "DownstreamPathTemplate": "/api/User/deleteProfile/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5037
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/GetProfileByMobileno",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DownstreamPathTemplate": "/api/User/GetUsersByMobileNo/{mobileNo}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5037
+                }
+            ]
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Eshoppingcart/AddnewProfile",
+            "UpstreamHttpMethod": [ "POST" ],
+            "DownstreamPathTemplate": "/api/User/addNewProfile",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5037
+                }
+            ]
+
+        }
+    ]
+}
