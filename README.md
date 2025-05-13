@@ -29,6 +29,7 @@ EShoppingZone is an e-commerce website built using ASP.NET Core. This platform f
 
 ## Use Case Diagram
 The use case diagram illustrates the interactions between users and the system, detailing the various functionalities available.
+![UserUseCase drawio (1)](https://github.com/user-attachments/assets/330c155f-62de-441a-bc95-6af172db097b)
 
 ## Getting Started
 ### Prerequisites
