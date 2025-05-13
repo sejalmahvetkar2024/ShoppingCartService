@@ -1,0 +1,78 @@
+### 	Database Explanation for Shopping Cart System
+
+## 1. User Management
+•	The system maintains a Users Table that stores user details such as name, email, phone number, address, and password.
+•	Each user has a unique User ID, which is used to track their shopping activities, including cart items, orders, and payments.
+. Users and Other Tables 👤
+•	Users → Addresses (One-to-Many)
+o	A user can have multiple addresses (e.g., home, office).
+o	The UserID in the Addresses Table links to the Users Table.
+•	Users → Carts (One-to-One)
+o	Each user has one active cart at a time.
+o	The UserID in the Carts Table links to the Users Table.
+•	Users → Orders (One-to-Many)
+o	A user can place multiple orders.
+o	The UserID in the Orders Table links to the Users Table.
+•	Users → Wallets (One-to-One)
+o	Each user has one wallet for online payments.
+o	The UserID in the Wallets Table links to the Users Table.
+
+## 2. Product Management
+•	All available products are stored in a Products Table, which includes product details like name, description, price, stock quantity, and category.
+•	Products are grouped into different categories, such as electronics, clothing, books, and personal care.
+
+  . Products and Related Tables 🛍️
+•	Products → Items (One-to-Many)
+o	A product can appear in multiple items or orders.
+o	The ProductID in the Items Table links to the Products Table.
+
+## 3. Order Processing
+•	Once a user places an order, the details are stored in an Orders Table.
+•	The Order Table keeps track of all products within an order, ensuring that multiple products can be included in a single order.
+•	Each order has a status (e.g., Pending, Shipped, Delivered) to track its progress.
+                   
+Orders and Related Tables 📦
+•	Orders → Items (One-to-Many)
+o	An order consists of multiple items.
+o	The OrderID in the Items Table links to the Orders Table.
+•	Orders → Addresses (One-to-One)
+o	Each order has a delivery address.
+o	The AddressID in the Orders Table links to the Addresses Table.
+•	Orders → Statements (One-to-One)
+o	Each order generates a statement for payment tracking.
+o	The OrderID in the Statements Table links to the Orders Table.
+
+
+## 4. Carts and Items 🛒
+•	Carts → Items (One-to-Many)
+o	A cart can have multiple items.
+o	The CartID in the Items Table links to the Carts Table.
+•	Items → Orders (Many-to-One)
+o	When a cart is checked out, all items move to an order.
+o	The OrderID in the Items Table links to the Orders Table
+
+## 5. Payment System
+•	Users can pay for their orders using different payment methods, which are recorded in a Payments Table.
+•	The system supports multiple payment options, including wallet payments and cash on delivery (COD).
+•	A separate Wallet Table is maintained to manage wallet balances for users who choose to pre-load money into their account.
+
+Wallets and Payments 💰
+•	Wallets → Users (One-to-One)
+o	A wallet belongs to one user.
+•	Wallets → Statements (One-to-Many)
+o	Wallet transactions are recorded in statements.
+o	The WalletID in the Statements Table links to the Wallets Table.
+
+## 6. Merchants 
+Merchants and Other Tables 🏪
+•	Merchants → Products (One-to-Many)
+o	A merchant can sell multiple products.
+o	The MerchantID in the Products Table links to the Merchants Table.
+•	Merchants → Orders (One-to-Many)
+o	A merchant can receive multiple orders for their products.
+o	The MerchantID in the Orders Table tracks which merchant is fulfilling the order.
+
+## 7. Shopping Cart System
+•	When a user adds a product to their cart, the details are stored in a Cart Table.
+•	The cart records the user ID, product ID, and quantity of each selected item.
+•	Users can modify the cart by adding or removing products before proceeding to checkout.
