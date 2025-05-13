@@ -1,6 +1,3 @@
-Based on the provided document, here's a suggested README content for your ASP.NET Core project:
-
----
 
 # EShoppingZone
 
